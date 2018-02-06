@@ -1,9 +1,15 @@
 # Statistics-Session-2---Assignment-1
 Probability of 5 wrong answers in a 20 MCQ test
 
+N = 1
+X = 1
 PNX = (3/4) ** 5
 PN = (1/4) ** 15
-NFactorial = (20*19*18*17*16)
-XFactorial = (5*4*3*2*1)
-Probability = ((NFactorial/XFactorial)*(PNX)*(PN))
+NFactorial = range(16, 21)
+for i in NFactorial:
+    N *= i
+XFactorial = range(1, 6)
+for j in XFactorial:
+    X *= j
+Probability = ((N/X)*(PNX)*(PN))
 print (Probability)
